@@ -13,8 +13,9 @@ get_json_val() {
 cwd=$(get_json_val "cwd" | sed 's/\\\\/\//g')
 [ -z "$cwd" ] && cwd=$(pwd)
 
-# Context window metrics
+# Context window metrics (default used_pct to 0 if empty/non-numeric)
 used_pct=$(get_json_val "used_percentage")
+[ -z "$used_pct" ] || ! [ "$used_pct" -eq "$used_pct" ] 2>/dev/null && used_pct=0
 window_size=$(get_json_val "context_window_size")
 cost_usd=$(get_json_val "total_cost_usd")
 session_id=$(get_json_val "session_id")
