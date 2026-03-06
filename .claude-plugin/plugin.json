@@ -1,0 +1,11 @@
+{
+  "name": "claude-statusline",
+  "version": "1.0.0",
+  "description": "A PS1-style status line for Claude Code with context window bar, git branch, compaction counter, and cross-platform support (Linux & Windows/Git Bash).",
+  "author": {
+    "name": "amtrt"
+  },
+  "repository": "https://github.com/amtrt/claude-statusline-plugin",
+  "license": "MIT",
+  "keywords": ["statusline", "prompt", "ps1", "context-window", "git"]
+}
