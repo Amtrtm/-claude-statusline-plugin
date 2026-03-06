@@ -6,7 +6,7 @@
 [![Claude Code Plugin](https://img.shields.io/badge/Claude%20Code-plugin-blueviolet.svg)](#)
 [![Zero Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](#)
 
-A PS1-style status line for Claude Code that shows your context window usage as a colored bar, git branch, compaction count, and session cost.
+A PS1-style status line for Claude Code with the **only compaction counter** available. See at a glance how full your context window is, how many times it's been compacted, and what you're spending — all in a familiar terminal prompt layout.
 
 ## Screenshot
 
@@ -15,22 +15,35 @@ amtrt@myhost Linux ~/projects/my-app (main)
  ███░░░░░░░ 38k/200k 19% [0] $0.42
 ```
 
+## Why This Plugin?
+
+Other statusline solutions show context usage — this one also **tracks compactions**. When your context window gets compressed, you'll see `[1]`, `[2]`, etc. increment in real time. This helps you understand how aggressively your session is being compacted and when it might be time to start fresh.
+
 ## Features
 
+- **Compaction counter** — `[N]` tracks how many times your conversation was compacted (unique to this plugin)
 - **Context window bar** — 10-character visual bar showing how full your context is
 - **Color-coded thresholds** — white (0-50%), yellow (51-75%), red (76%+)
-- **Compaction counter** — `[N]` shows how many times the conversation was compacted
 - **Git branch** — current branch or short SHA
 - **Session cost** — running USD cost
 - **Cross-platform** — works on Linux, macOS, and Windows (Git Bash / MSYS2)
 - **Zero dependencies** — pure bash, no jq or external tools required
+- **Auto-setup** — works out of the box via SessionStart hook
 
 ## Installation
 
-### From Claude Plugins Marketplace
+### From Claude Plugins Marketplace (once approved)
 
 ```
-/install-plugin claude-statusline
+/plugin install claude-statusline@claude-plugins-official
+```
+
+Or browse via `/plugin > Discover`.
+
+### From GitHub (available now)
+
+```
+/plugin marketplace add Amtrtm/-claude-statusline-plugin
 ```
 
 ### Manual (local)
