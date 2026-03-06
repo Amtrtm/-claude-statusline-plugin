@@ -37,7 +37,7 @@ amtrt@myhost Linux ~/projects/my-app (main)
 
 1. Clone this repo:
    ```bash
-   git clone https://github.com/amtrt/claude-statusline-plugin.git ~/.claude/plugins/local/claude-statusline
+   git clone https://github.com/Amtrtm/-claude-statusline-plugin.git ~/.claude/plugins/local/claude-statusline
    ```
 
 2. Enable in `~/.claude/settings.json`:

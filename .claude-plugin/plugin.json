@@ -5,7 +5,7 @@
   "author": {
     "name": "amtrt"
   },
-  "repository": "https://github.com/amtrt/claude-statusline-plugin",
+  "repository": "https://github.com/Amtrtm/-claude-statusline-plugin",
   "license": "MIT",
   "keywords": ["statusline", "prompt", "ps1", "context-window", "git"]
 }
